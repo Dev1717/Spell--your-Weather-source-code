@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image:url("kristian-seedorff-BvUicqkaZZ0-unsplash.jpg");
+  background-size: cover;
+  
+}
+
+.logo{
+  position: fixed;
+  width: 40px;
+  left:-8px;
+  top: -15px;
+}
+
+.backlogo{
+  border-radius: 50%;
+  height: 210px;
+  width: 230px;
+  position: relative;
+  
+}
+
+p{
+  color: #fff;
+  font-weight: 400;
+  transition: 2s;
+}
+
+p:hover{
+    color: #FF0700;
+}
+
+
+.mainContainer {
+  width: 25rem;
+  height: auto;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+}
+
+.searchInput {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: center;
+}
+
+.searchInput input {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  font-size: 1rem;
+  color: #525050;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid #b3b3b3;
+}
+
+.searchInput input:focus {
+  border: 1px solid #9c9dde;
+}
+
+.searchInput button {
+  width: 2.2rem;
+  height: 2rem;
+  cursor: pointer;
+  color: #9b9b9b;
+  border-radius: 50%;
+  margin-left: 0.4rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #b3b3b3;
+}
+
+.searchInput button:hover {
+  color: #fff;
+  background-color: #EC7813;
+  border: 1px solid #EC7813;
+}
+
+.weatherIcon {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.weatherIcon img {
+  max-width: 100%;
+  width: 8rem;
+}
+
+.weatherDetails .temp{
+ font-size: 2rem;
+}
+.cityDetails {
+  color: #323232;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.cityDetails .date {
+  color: #323232;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.windDetails {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-around;
+}
+
+.windDetails .humidityBox {
+  display: flex;
+  font-size: 1rem;
+  color: #323232;
+}
+
+.windDetails .humidity .humidityValue {
+ text-align: center;
+  font-size: 2rem;
+  color: #323232;
+}
+
+.windDetails .humidityBox img {
+  max-height: 3rem;
+  margin-right: 0.5rem;
+}
+
+.windDetails .windSpeed {
+  display: flex;
+  font-size: 1rem;
+  color: #323232;
+}
+
+.windDetails .windSpeed img {
+  max-height: 3rem;
+  margin-right: 0.5rem;
+}
+
+
+image-logo{
+        height: auto;
+        width: auto;
+        filter: drop-shadow(20px 10px 10px black);
+      }
+
+
+
+     /* h1 span{
+        position: relative;
+      }
+
+      h1 span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #B4CAD8;
+        border-left: 2px solid green;
+        animation: typing 1.5s steps(29) ;
+
+      }
+
+      @keyframes typing{
+        100%{
+          left: 100%;
+          margin: 0 -35px 0 35px;
+        }
+      }
+      */
+
+      /*leaf styling */
+      section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section .set{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      section .set div{
+        position: absolute;
+        display: block;
+      }
+
+      section .set div:nth-child(1){
+        left: 20%;
+        animation: animate 15s linear infinite;
+        animation-delay: -7s;
+      }
+
+      section .set div:nth-child(2){
+        left: 50%;
+        animation: animate 20s linear infinite;
+        animation-delay: -5s;
+
+      }
+
+      section .set div:nth-child(3){
+        left: 70%;
+        animation: animate 20s linear infinite;
+        animation-delay: 0s;
+
+      }
+
+      section .set div:nth-child(4){
+        left: 0%;
+        animation: animate 15s linear infinite;
+        animation-delay: -5s;
+
+      }
+
+      section .set div:nth-child(5){
+        left: 85%;
+        animation: animate 18s linear infinite;
+        animation-delay: -10s;
+
+      }
+
+      section .set div:nth-child(6){
+        left: 0%;
+        animation: animate 12s linear infinite;
+      }
+
+      section .set div:nth-child(7){
+        left: 15%;
+        animation: animate 14s linear infinite;
+      }
+
+      section .set div:nth-child(8){
+        left: 60%;
+        animation: animate 15s linear infinite;
+      }
+
+
+      @keyframes animate{
+        0%{
+          opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);  
+      }
+      10%{
+        opacity: 1;
+
+      }
+      20%{
+        transform: translateX(-20px) rotate(45deg);
+      }
+      40%
+      {
+        transform: translateX(-20px) rotate(90deg);
+      }
+      60%
+      {
+        transform: translateX(20px) rotate(180deg);
+      }
+      80%
+      {
+        transform: translateX(-20px) rotate(180deg);
+      }
+      100%
+      {
+        top:110%;
+        transform: translateX(-20px) rotate(225deg);
+      }
+    
+    }
+
+    /*.set2{
+      transform: scale(2) rotate(180deg);
+      filter: blur(2px);
+
+    }*/
+
+    .set3{
+      transform: scale(.9) rotate(180deg);
+      filter: blur(4px);
+    }
+
+    /*main content */
+
+    .wrapper h1{
+      font-size: 40px;
+      color: #EC7813;
+      font-weight: 550;
+      transition: 2s;
+  }
+  .wrapper h1:hover{
+      -webkit-text-stroke: .8px #EC7813;
+      color: transparent;
+  }
+
+  @media screen and (max-width:600px){
+    .logo{
+      position: absolute;
+      width: 20px;
+      margin-top: 0;
+      left: -40px;
+    }
+
+    .wrapper h1{
+      font-size: 20px;
+    }
+
+    .wrapper p{
+      font-size: 15px;
+    }
+  }
+  
+  
